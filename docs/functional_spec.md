@@ -19,12 +19,12 @@ An animation on the map shows how the pandemic impacted the CPI.
 ### Use Cases 2
 #### The objective of the user interaction: 
 For government officials: 
-check the unemployment rate of King County and finally exports a diagram. 
-It also provides the CPI data visualization as described above.
+*Check the unemployment rate of King County and finally exports a diagram. 
+*It also provides the CPI data visualization as described above.
 #### What our tool provides:
 Users can click the button in the UI to set their requirements. 
-The visualized data will be presented on the map
-Relevant diagrams will also show in the UI and the tool will provide a download option.  
+*The visualized data will be presented on the map
+*Relevant diagrams will also show in the UI and the tool will provide a download option.  
 
 ### Use Cases 3
 #### The objective of the user interaction: 
