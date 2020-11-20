@@ -8,7 +8,7 @@ After processing the data, we will use the Folium package to make some interacti
 We will use the panel package to design the UI and make the user interface.
 ## Interactions to accomplish use cases
 * Users should first click a button on the page or type in their requirements to the input box to express their needs.  
-* The user interface component of our tool should receive their inputs and transfer these inputs as different queries.    
+* The user interface component of our tool should receive their inputs and transfer these inputs to different queries.    
 * Then those queries will be sent to the Data Manager component.  
 * The Data Manager component will return correct data subsets from tables and send them to the Visualization Manager component.  
 * Visualization Manager will process these data and show the map or plot to the users.    
