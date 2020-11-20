@@ -28,7 +28,7 @@ Users can click the button in the UI to set their requirements.
 
 ### Use Cases 3
 #### The objective of the user interaction: 
-For other desinger:
+For other designer:
 * implement our visualization tool as a part of their project.
 #### What our tool provides:
 Users could use our tool as a display tool to present data.
