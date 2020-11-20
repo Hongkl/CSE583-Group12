@@ -11,15 +11,20 @@ Anyone who is interested in COVID-19 impact on King County and knows how to use 
 ## Use Cases
 ### Use Cases 1
 #### The objective of the user interaction: 
-A citizen who wants to see how the infection ratio impacted the CPI (e.g. gasoline price) on the map of the King county area since the outbreak began. 
+For regular citizens:
+See how the infection ratio impacted the CPI (e.g. gasoline price) on the map of the King county area since the outbreak began. 
 #### What our tool provides: 
 An animation on the map shows how the pandemic impacted the CPI.
 
 ### Use Cases 2
 #### The objective of the user interaction: 
-A government official who wants to check the unemployment rate of King County and finally exports a diagram. Also, it provides the CPI data visualization as described above.
+For government officials: 
+check the unemployment rate of King County and finally exports a diagram. 
+It also provides the CPI data visualization as described above.
 #### What our tool provides:
-Users can click the button in the UI to set their requirements. The visualized data will be presented on the map, and relevant diagrams will also show in the UI and the tool will provide a download option.  
+Users can click the button in the UI to set their requirements. 
+The visualized data will be presented on the map
+Relevant diagrams will also show in the UI and the tool will provide a download option.  
 
 ### Use Cases 3
 #### The objective of the user interaction: 
