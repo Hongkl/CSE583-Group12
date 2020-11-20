@@ -5,7 +5,7 @@ We need to download the King county’s covid data file and related data files i
 ### 2. Data Visualization
 After processing the data, we will use the Folium package to make some interactive maps.
 ### 3. Interface
-After processing the data, we will use the Folium package to make some interactive maps.
+We will use the panel package to design the UI and make the user interface.
 ## Interactions to accomplish use cases
 * Users should first click a button on the page or type in their requirements to the input box to express their needs.  
 * The user interface component of our tool should receive their inputs and transfer these inputs as different queries.    
