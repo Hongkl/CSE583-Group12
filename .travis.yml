@@ -30,7 +30,7 @@ install:
 
 # a list of commands to run before the main script
 before_script:
-    - flake8 CSE583-Group12
+    - flake8 CSE583-Group12 --ignore=E501
 
 # the actual commands to run
 script:
