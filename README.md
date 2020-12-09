@@ -23,7 +23,7 @@ To install COVID-WA perform following steps:
 5. Open COVID-WA folder and run the code in command line: python CovidWeb.py
 
 
-![](demo/dashboard.png?raw=true)
+![](demo/dashboard1.png?raw=true)
 
 ### Project Directory Structure
 ```
