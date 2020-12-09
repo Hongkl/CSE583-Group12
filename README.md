@@ -25,7 +25,7 @@ To install COVID-WA perform following steps:
 After running the CovidWeb.py, the web will pop up automaticaly showed as below:
 
 
-![](demo/dashboard1.png?raw=true)
+![](demo/dashboard.png?raw=true)
 
 ### Project Directory Structure
 ```
