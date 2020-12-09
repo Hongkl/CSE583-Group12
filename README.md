@@ -22,6 +22,9 @@ To install COVID-WA perform following steps:
 4. Activate the new environment: conda activate myenv
 5. Open COVID-WA folder and run the code in command line: python CovidWeb.py
 
+
+![Dashboard demo](demo/WeChat8a47e143a51a7d9adb8678b0f168d574.png?raw=true)
+
 ### Project Directory Structure
 ```
 CSE583-Group12/
