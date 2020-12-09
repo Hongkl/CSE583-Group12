@@ -20,10 +20,12 @@ To install COVID-WA perform following steps:
 2. Clone the repo: https://github.com/Hongkl/CSE583-Group12.git
 3. Create a new conda environment for this tool: conda env create -f environment.yml
 4. Activate the new environment: conda activate myenv
-5. Open COVID-WA folder and run the code in command line: python CovidWeb.py
+5. Open COVID-WA folder and run the code in command line: python CovidWeb.py  
+
+After running the CovidWeb.py, the web will pop up automaticaly showed as below:
 
 
-![](demo/dashboard.png?raw=true)
+![](demo/dashboard1.png?raw=true)
 
 ### Project Directory Structure
 ```
