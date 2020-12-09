@@ -5,6 +5,7 @@ import json
 import param
 import os
 import webbrowser
+import ToolBox
 
 pn.extension()
 
@@ -20,15 +21,16 @@ class CovidWeb(param.Parameterized):
     
     @param.depends('Counties','Months')
     def unemploy_text(self):
-        data = pd.read_csv("../data/Unemployed/Unemployment.csv")
-        County = self.Counties
-        countyName = County + " " + "County" 
-        searchCounty = data[data['County Name/State Abbr'] == countyName]# Here should insert an exceptioncatch, if we don't have a dic
-        searchFinal = searchCounty[searchCounty['Period'] == self.Months] # Here should insert an exceptioncatch
-        text = "County Name: " + searchFinal['County Name/State Abbr'].item()+'     '\
-        "Period: " + searchFinal['Period'].item()+ '     ' \
-        "Unemployment Rate: " + str(searchFinal['Rate'].item())                 
-        return text
+        # data = pd.read_csv("../data/Unemployed/Unemployment.csv")
+        county = self.Counties
+        month = self.Months
+        # countyName = County + " " + "County" 
+        # searchCounty = data[data['County Name/State Abbr'] == countyName]# Here should insert an exceptioncatch, if we don't have a dic
+        # searchFinal = searchCounty[searchCounty['Period'] == self.Months] # Here should insert an exceptioncatch
+        # text = "County Name: " + searchFinal['County Name/State Abbr'].item()+'     '\
+        # "Period: " + searchFinal['Period'].item()+ '     ' \
+        # "Unemployment Rate: " + str(searchFinal['Rate'].item())                 
+        return ToolBox.unemploy_text_parser(county,month)
     
     def getGeoAndData(self):
         state_geo = json.load(open("../data/WA_County_Boundaries.geojson"))
@@ -37,7 +39,7 @@ class CovidWeb(param.Parameterized):
     
     @param.depends('Counties','Months')                                            
     def popup(self):
-        Map = folium.Map(location=[47.351076, -120.640135], zoom_start=7.5)
+        Map = folium.Map(location=[47.351076, -120.640135], zoom_start=6.5)
         
         #popup Unemployment data    
         searchCounty = '../data/WA_County_json/'+ self.Counties + '.json' 
@@ -57,7 +59,7 @@ class CovidWeb(param.Parameterized):
             fill_opacity=0.7,
             line_opacity=0.2,
             threshold_scale=[0, 0.1, 0.2, 0.4, 0.6, 0.8, 1.2, 1.8],
-            legend_name='Covid19 Infect Rate (%)',
+            legend_name='Covid19 Infection Rate (%)',
         ).add_to(Map)
         Map.keep_in_front(layer2, layer1)
         folium.LayerControl().add_to(Map)
