@@ -8,7 +8,7 @@ import webbrowser
 
 pn.extension()
 
-class unemploymentDisplay(param.Parameterized):
+class CovidWeb(param.Parameterized):
     Months = param.ObjectSelector(default='March', objects = ['March','April','May','June','July','August','September'])
     Counties = param.ObjectSelector(default='Clark',objects = ["Adams","Asotin","Benton","Chelan","Clallam","Clark","Columbia",
                                                                   "Cowlitz","Douglas","Ferry","Franklin","Garfield","Grant", "Grays Harbor",
@@ -66,8 +66,9 @@ class unemploymentDisplay(param.Parameterized):
     @param.depends('Counties','Months')   
     def view(self): 
         return pn.pane.HTML(self.popup(), sizing_mode="scale_both")
+
     
-viewer = unemploymentDisplay(name='Group-12 Map Viewer')
+viewer = CovidWeb(name='Group-12 Map Viewer')
 
 pn.Row(viewer.param, viewer.view).servable()
 os.popen('panel serve --show CovidWeb.py').read() 
