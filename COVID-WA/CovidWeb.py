@@ -31,7 +31,7 @@ class unemploymentDisplay(param.Parameterized):
         return text
     
     def getGeoAndData(self):
-        state_geo = json.load(open("WA_County_Boundaries.geojson"))
+        state_geo = json.load(open("../data/WA_County_Boundaries.geojson"))
         state_data = pd.read_csv("../data/COVID19/COVID19-Rate.csv")
         return state_geo, state_data
     
@@ -40,7 +40,7 @@ class unemploymentDisplay(param.Parameterized):
         Map = folium.Map(location=[47.351076, -120.640135], zoom_start=7.5)
         
         #popup Unemployment data    
-        searchCounty = 'WA_County_json/'+ self.Counties + '.json' 
+        searchCounty = '../data/WA_County_json/'+ self.Counties + '.json' 
         Text = self.unemploy_text()
         layer1 = folium.features.GeoJson(data = json.load(open(searchCounty)), tooltip = folium.map.Tooltip(text = Text)).add_to(Map)
         
