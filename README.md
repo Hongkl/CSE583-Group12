@@ -1,5 +1,5 @@
 # CSE583-Group12
-Team Member: Hongkuan Lin, Jinghao Zhang, Jing Cao, Dingyu Zhang
+Team Member: Hongkuan Lin, Jinghao Chang, Jing Cao, Dingyu Zhang
 [![Build Status](https://travis-ci.org/Hongkl/CSE583-Group12.svg?branch=main)](https://travis-ci.org/Hongkl/CSE583-Group12)
 [![Coverage Status](https://coveralls.io/repos/github/Hongkl/CSE583-Group12/badge.svg)](https://coveralls.io/github/Hongkl/CSE583-Group12)
 
