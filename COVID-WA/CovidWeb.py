@@ -8,8 +8,8 @@ We mainly use "panel" library to realize the widgets and the dashboard.Panel sup
 parameters and dependencies between parameters as expressed by "param" in a simple way to 
 encapsulate dashboards as declarative, self-contained classes.
 
-Users don't need to input anything in the web page, all the information or data will be loaded 
-automatically.
+Users don't need to input anything on the web page, just choose the period and the county name,
+all the information or data will be loaded automatically.
 """
 
 import pandas as pd
