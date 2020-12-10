@@ -1,6 +1,6 @@
-"""This module includes a series of test cases to confirm the validity of knn.py
+"""This module includes a series of test cases to confirm the validity of ToolBox.py
 
-UnitTests(unittest.TestCase) -- this class is a unit test which includes 8 different test for knn.py
+UnitTests(unittest.TestCase) -- this class is a unit test which includes 5 different test for ToolBox.py
 
 """
 import unittest
@@ -10,7 +10,7 @@ sys.path.insert(0, '../COVID-WA')
 import ToolBox
 
 class UnitTests(unittest.TestCase):
-    """"This class is a unit test which includes 8 different test for knn.py."""
+    """"This class is a unit test which includes 8 different test for ToolBox.py."""
     #Smoke test
     def test_smoke(self):
         """"This function is a smoke test for ToolBox.py.
