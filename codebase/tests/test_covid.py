@@ -4,10 +4,7 @@ UnitTests(unittest.TestCase) -- this class is a unit test which includes 5 diffe
 
 """
 import unittest
-import sys
-import numpy as np
-sys.path.insert(0, '../COVID-WA')
-import ToolBox
+from codebase.covid_wa import TooBox
 
 class UnitTests(unittest.TestCase):
     """"This class is a unit test which includes 8 different test for ToolBox.py."""
@@ -84,5 +81,5 @@ class UnitTests(unittest.TestCase):
             text = ToolBox.unemploy_text_parser(county,month)
     
 
-suite = unittest.TestLoader().loadTestsFromTestCase(UnitTests)
-_ = unittest.TextTestRunner().run(suite)
+if __name__ == '__main__':
+    unittest.main()
