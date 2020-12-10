@@ -4,7 +4,7 @@ UnitTests(unittest.TestCase) -- this class is a unit test which includes 5 diffe
 
 """
 import unittest
-from codebase.covid_wa import TooBox
+from covid_wa.covid_web import TooBox
 
 class UnitTests(unittest.TestCase):
     """"This class is a unit test which includes 8 different test for ToolBox.py."""
