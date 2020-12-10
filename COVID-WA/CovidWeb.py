@@ -1,3 +1,17 @@
+""" This is the CovidWeb module.As the name shows, after the user have set up the environment,
+they could run this module to interact and browse the Covid and unemployment data on the map.
+The map will be displayed on a web page automatically. The user therefore should have a browser.
+
+This module includes a class called CovidWeb which is inherited from "param.Parameterized".
+
+We mainly use "panel" library to realize the widgets and the dashboard.Panel supports using 
+parameters and dependencies between parameters as expressed by "param" in a simple way to 
+encapsulate dashboards as declarative, self-contained classes.
+
+Users don't need to input anything in the web page, all the information or data will be loaded 
+automatically.
+"""
+
 import pandas as pd
 import panel as pn
 import folium
@@ -7,29 +21,33 @@ import os
 import webbrowser
 import ToolBox
 
-pn.extension()
+pn.extension() 
 
 class CovidWeb(param.Parameterized):
+    """This is the CovidWeb class which is inherited from param.Parameterized. 
+    The fields include:
+    Months, which is supposed to provide the users a period of time to choose when they click the button, 
+    Counties, which is suppoesed to provide the users a whole list of counties of Washington State to choose
+    when they click the button.
+    The methods include:
+    unemploy_text(self): search and return the unemployment data by implementing "ToolBox.unemploy_text_parser(county,month)"
+    getGeoAndData(self): search and return the covid data, this method will be implemented in the "popup(self)"
+    popup(self): build a map and add layers to it, the layers will include the covid and the unemployment data
+    view(self): build the dashboard and present it as a HTML file
+    """
     Months = param.ObjectSelector(default='March', objects = ['March','April','May','June','July','August','September'])
     Counties = param.ObjectSelector(default='Clark',objects = ["Adams","Asotin","Benton","Chelan","Clallam","Clark","Columbia",
-                                                                  "Cowlitz","Douglas","Ferry","Franklin","Garfield","Grant", "Grays Harbor",
-                                                                  "Island","Jefferson","King","Kitsap","Kittitas","Klickitat","Lewis",
-                                                                  "Lincoln","Mason","Okanogan","Pacific","Pend Oreille","Pierce","SanJuan",
-                                                                  "Skagit","Skamania","Snohomish","Spokane","Stevens","Thurston","Wahkiakum",
-                                                                  "Walla Walla","Whatcom","Whitman","Yakima"])
+                                           "Cowlitz","Douglas","Ferry","Franklin","Garfield","Grant", "Grays Harbor",
+                                           "Island","Jefferson","King","Kitsap","Kittitas","Klickitat","Lewis",
+                                           "Lincoln","Mason","Okanogan","Pacific","Pend Oreille","Pierce","SanJuan",
+                                            "Skagit","Skamania","Snohomish","Spokane","Stevens","Thurston","Wahkiakum",
+                                           "Walla Walla","Whatcom","Whitman","Yakima"])
     #Map = folium.Map(location=[47.751076, -120.740135], zoom_start=7)
     
     @param.depends('Counties','Months')
     def unemploy_text(self):
-        # data = pd.read_csv("../data/Unemployed/Unemployment.csv")
         county = self.Counties
-        month = self.Months
-        # countyName = County + " " + "County" 
-        # searchCounty = data[data['County Name/State Abbr'] == countyName]# Here should insert an exceptioncatch, if we don't have a dic
-        # searchFinal = searchCounty[searchCounty['Period'] == self.Months] # Here should insert an exceptioncatch
-        # text = "County Name: " + searchFinal['County Name/State Abbr'].item()+'     '\
-        # "Period: " + searchFinal['Period'].item()+ '     ' \
-        # "Unemployment Rate: " + str(searchFinal['Rate'].item())                 
+        month = self.Months              
         return ToolBox.unemploy_text_parser(county,month)
     
     def getGeoAndData(self):
