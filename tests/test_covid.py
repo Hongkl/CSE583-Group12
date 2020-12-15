@@ -20,7 +20,7 @@ class UnitTests(unittest.TestCase):
         """
         county = "King"
         month = "June"
-        text = unemploy_text_parser(county,month)
+        text = ToolBox.unemploy_text_parser(county,month)
 
     def test_oneshot1(self):
         """"This function is a smoke test for ToolBox.py.
@@ -33,7 +33,7 @@ class UnitTests(unittest.TestCase):
         """
         county = "King"
         month = "June"
-        text = unemploy_text_parser(county,month)
+        text = ToolBox.unemploy_text_parser(county,month)
         test_text = 'County Name: King County     Period: June     Unemployment Rate: 9.6'
         self.assertEqual(text, test_text)
     
@@ -48,7 +48,7 @@ class UnitTests(unittest.TestCase):
         """
         county = "Pacific"
         month = "September"
-        text = unemploy_text_parser(county,month)
+        text = ToolBox.unemploy_text_parser(county,month)
         test_text = 'County Name: Pacific County     Period: September     Unemployment Rate: 9.5'
         self.assertEqual(text, test_text)
     
@@ -64,7 +64,7 @@ class UnitTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             county = "San Francisco"
             month = "June"
-            text = unemploy_text_parser(county,month)
+            text = ToolBox.unemploy_text_parser(county,month)
     
     def test_edge1(self):
         """"This function is a smoke test for ToolBox.py.
@@ -78,7 +78,7 @@ class UnitTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             county = "King"
             month = "November"
-            text = unemploy_text_parser(county,month)
+            text = ToolBox.unemploy_text_parser(county,month)
     
 
 if __name__ == '__main__':
