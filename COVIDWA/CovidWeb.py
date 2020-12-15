@@ -35,13 +35,13 @@ class CovidWeb(param.Parameterized):
     popup(self): build a map and add layers to it, the layers will include the covid and the unemployment data
     view(self): build the dashboard and present it as a HTML file
     """
-    Months = param.ObjectSelector(default='March', objects = ['March','April','May','June','July','August','September'])
-    Counties = param.ObjectSelector(default='Clark',objects = ["Adams","Asotin","Benton","Chelan","Clallam","Clark","Columbia",
-                                           "Cowlitz","Douglas","Ferry","Franklin","Garfield","Grant", "Grays Harbor",
-                                           "Island","Jefferson","King","Kitsap","Kittitas","Klickitat","Lewis",
-                                           "Lincoln","Mason","Okanogan","Pacific","Pend Oreille","Pierce","SanJuan",
-                                            "Skagit","Skamania","Snohomish","Spokane","Stevens","Thurston","Wahkiakum",
-                                           "Walla Walla","Whatcom","Whitman","Yakima"])
+    Months = param.ObjectSelector(default='March', objects = ['March', 'April', 'May', 'June', 'July', 'August', 'September'])
+    Counties = param.ObjectSelector(default='Clark',objects = ["Adams", "Asotin", "Benton", "Chelan", "Clallam", "Clark", "Columbia",
+                                           "Cowlitz", "Douglas", "Ferry", "Franklin", "Garfield", "Grant", "Grays Harbor",
+                                           "Island", "Jefferson", "King", "Kitsap", "Kittitas", "Klickitat", "Lewis",
+                                           "Lincoln", "Mason", "Okanogan", "Pacific", "Pend Oreille", "Pierce", "SanJuan",
+                                            "Skagit", "Skamania", "Snohomish", "Spokane", "Stevens", "Thurston", "Wahkiakum",
+                                           "Walla Walla", "Whatcom", "Whitman", "Yakima"])
     #Map = folium.Map(location=[47.751076, -120.740135], zoom_start=7)
     
     @param.depends('Counties','Months')
