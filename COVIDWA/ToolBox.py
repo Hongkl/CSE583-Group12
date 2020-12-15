@@ -32,7 +32,8 @@ def unemploy_text_parser(county, month):
 
 def plot(county):
     county = county + " " + "County"
-    covid_data = pd.read_csv("../data/COVID19/COVID19-Rate and Unemployment.csv")
+    covid_data = pd.read_csv(
+        "../data/COVID19/COVID19-Rate and Unemployment.csv")
     df_covid = pd.DataFrame(covid_data.loc[covid_data['County'] == county,
                                            ['March',
                                             'April',
@@ -41,14 +42,15 @@ def plot(county):
                                             'July',
                                             'August',
                                             'September']].T)
-    df_unemployment = pd.DataFrame(covid_data.loc[covid_data['County'] == county,
-                                                  ['March_umemployment',
-                                                   'April_umemployment',
-                                                   'May_umemployment',
-                                                   'June_umemployment',
-                                                   'July_umemployment',
-                                                   'August_umemployment',
-                                                   'Septembe_umemployment']].T)
+    df_unemployment = pd.DataFrame(
+        covid_data.loc[covid_data['County'] == county,
+                       ['March_umemployment',
+                        'April_umemployment',
+                        'May_umemployment',
+                        'June_umemployment',
+                        'July_umemployment',
+                        'August_umemployment',
+                        'Septembe_umemployment']].T)
     df_unemployment.rename({'March_umemployment': 'March'},
                            axis='index', inplace=True)
     df_unemployment.rename({'April_umemployment': 'April'},
