@@ -59,17 +59,37 @@ class CovidWeb(param.Parameterized):
 
     @param.depends('Counties', 'Months')
     def unemploy_text(self):
+        """This is a method called unemploy_text.
+        The goal of this method is to provide the text which
+        contains each county's unemployment rate based on the
+        particular period.
+        Arg:
+        Return: Call ToolBox.unemploy_text_parser(county, month),
+        which will return the parsed text about unemployment rate."""
+        
         county = self.Counties
         month = self.Months
         return ToolBox.unemploy_text_parser(county, month)
 
     def getGeoAndData(self):
+        """This is a method called getGeoAndData.
+        The goal of this method is to provide the Geo-data and
+        Covid data to another method.
+        Arg:
+        Return: Geo-data and Covid data."""
+        
         state_geo = json.load(open("../data/WA_County_Boundaries.geojson"))
         state_data = pd.read_csv("../data/COVID19/COVID19-Rate.csv")
         return state_geo, state_data
 
     @param.depends('Counties', 'Months')
     def popup(self):
+        """This is a method called popup.
+        The goal of this method is to pop up the information on the map,
+        so users could see that directly.
+        Arg:
+        Return: An interactive map"""
+        
         Map = folium.Map(location=[47.351076, -120.640135], zoom_start=6.5)
 
         # popup Unemployment data
@@ -100,6 +120,14 @@ class CovidWeb(param.Parameterized):
 
     @param.depends('Counties', 'Months')
     def view(self):
+        """This is a method called view. This
+        method is called when we have an instance of this 
+        class. The goal of this method is to call other methods
+        to build our final dashboard.
+        Arg: 
+        Return: call pn.pane.HTML(self.popup(), sizing_mode=
+        "scale_both"), which will return a dashboard."""
+        
         return pn.pane.HTML(self.popup(), sizing_mode="scale_both")
 
 
