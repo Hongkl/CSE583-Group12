@@ -1,5 +1,4 @@
 import pandas as pd
-import matplotlib
 months = {'March', 'April', 'May', 'June', 'July', 'August', 'September'}
 counties = {"Adams", "Asotin", "Benton", "Chelan", "Clallam", "Clark",
             "Columbia", "Cowlitz", "Douglas", "Ferry", "Franklin",
