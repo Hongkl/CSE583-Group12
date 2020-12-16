@@ -15,7 +15,7 @@ data = pd.read_csv("data/Unemployed/Unemployment.csv")
 class UnitTests(unittest.TestCase):
     """"This class is a unit test which includes 8 different test for ToolBox.py."""
     #Smoke test
-    def test_smoke(self):
+    def test_smoke1(self):
         """"This function is a smoke test for ToolBox.py.
         
         Args:
@@ -27,6 +27,18 @@ class UnitTests(unittest.TestCase):
         county = "King"
         month = "June"
         text = ToolBox.unemploy_text_parser(county, month, data)
+
+    def test_smoke2(self):
+        """"This function is a smoke test for ToolBox.py.
+        
+        Args:
+            self: Instance object.
+        
+        Returns:
+            bool: True for pass the test, False otherwise.
+        """
+        county = "King"
+        ToolBox.plot(county, data)
 
     def test_oneshot1(self):
         """"This function is a smoke test for ToolBox.py.

@@ -14,7 +14,7 @@ def unemploy_text_parser(county, month, data):
     if month not in months:
         raise ValueError("Wrong month value input")
 
-    if county not in county:
+    if county not in counties:
         raise ValueError("Wrong county value input")
 
     countyName = county + " " + "County"
