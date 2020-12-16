@@ -23,7 +23,7 @@ import folium
 import json
 import param
 import os
-import ToolBox
+import tool_box
 
 pn.extension()
 
@@ -70,7 +70,7 @@ class CovidWeb(param.Parameterized):
         data = pd.read_csv("../data/Unemployed/Unemployment.csv")
         county = self.Counties
         month = self.Months
-        return ToolBox.unemploy_text_parser(county, month, data)
+        return tool_box.unemploy_text_parser(county, month, data)
 
     def getGeoAndData(self):
         """This is a method called getGeoAndData.
@@ -135,4 +135,4 @@ class CovidWeb(param.Parameterized):
 viewer = CovidWeb(name='Group-12 Map Viewer')
 
 pn.Row(viewer.param, viewer.view).servable()
-os.popen('panel serve --show CovidWeb.py').read()
+os.popen('panel serve --show covid_web.py').read()
