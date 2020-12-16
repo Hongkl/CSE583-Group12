@@ -1,9 +1,9 @@
-# CSE583-Group12
+# CSE583_Group12
 Team Member: Hongkuan Lin, Jinghao Chen, Jing Cao, Dingyu Zhang
 [![Build Status](https://travis-ci.org/Hongkl/CSE583_Group12.svg?branch=main)](https://travis-ci.org/Hongkl/CSE583_Group12)
 [![Coverage Status](https://coveralls.io/repos/github/Hongkl/CSE583_Group12/badge.svg?branch=main)](https://coveralls.io/github/Hongkl/CSE583_Group12?branch=main)
 
-### COVID-WA
+### COVID_WA
 COVID-WA is a python base visuallization tool that built on top of pandas, folium and panel packages. It generates a web interface for users to easily visualize the COVID19 and unemployment data for Washington State. Users can simply click on bottoms to visualize different data for various demands.
 
 
@@ -30,8 +30,11 @@ After running the CovidWeb.py, the web will pop up automaticaly showed as below:
 
 ### Project Directory Structure
 ```
-CSE583-Group12/
-  |- COVID-WA/
+CSE583_Group12/
+  |- covid_wa/
+     |- tool_box.py
+     |- covid_web.py
+     |- __init__.py
   |- data/
      |- COVID19/
         |- COVID19-Rate.csv
@@ -51,11 +54,7 @@ CSE583-Group12/
   |- example/
      |- Unemployment_popup.ipynb
      |- Untitled.ipynb
-     |- kingCounty.csv
-     |- kingCounty.json
-     |- matplot.ipynb
-     |- mergeFile.ipynb
-     |- test.html
+     |- ...   
   |- tests/
      |- __init__.py
      |- test_covid.py
