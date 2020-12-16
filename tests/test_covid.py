@@ -5,7 +5,7 @@ UnitTests(unittest.TestCase) -- this class is a unit test which includes 5 diffe
 """
 import unittest
 import pandas as pd
-import matplotlib.pyplot
+import matplotlib
 from COVIDWA import ToolBox
 import sys
 
