@@ -10,6 +10,8 @@ counties = {"Adams", "Asotin", "Benton", "Chelan", "Clallam", "Clark",
             "Walla Walla", "Whatcom", "Whitman", "Yakima"}
 
 data = pd.read_csv("Unemployment.csv")
+
+
 def unemploy_text_parser(county, month):
     if month not in months:
         raise ValueError("Wrong month value input")
