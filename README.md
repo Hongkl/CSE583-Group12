@@ -1,7 +1,7 @@
 # CSE583_Group12
 Team Member: Hongkuan Lin, Jinghao Chen, Jing Cao, Dingyu Zhang
-[![Build Status](https://travis-ci.org/Hongkl/CSE583_Group12.svg?branch=main)](https://travis-ci.org/Hongkl/CSE583_Group12)
 [![Coverage Status](https://coveralls.io/repos/github/Hongkl/CSE583_Group12/badge.svg?branch=main)](https://coveralls.io/github/Hongkl/CSE583_Group12?branch=main)
+[![Build Status](https://travis-ci.org/Hongkl/CSE583_Group12.svg?branch=main)](https://travis-ci.org/Hongkl/CSE583_Group12)
 
 ### COVID_WA
 COVID-WA is a python base visuallization tool that built on top of pandas, folium and panel packages. It generates a web interface for users to easily visualize the COVID19 and unemployment data for Washington State. Users can simply click on bottoms to visualize different data for various demands.
