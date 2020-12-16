@@ -23,8 +23,8 @@ def unemploy_text_parser(county, month, data):
     searchFinal = searchCounty[searchCounty['Period'] == month]
     # Here should insert an exceptioncatch
     text = "County Name: " +
-            searchFinal['County Name/State Abbr'].item()+'     '+
-            "Period: " + searchFinal['Period'].item() + '     '+
+            searchFinal['County Name/State Abbr'].item()+'     '+\
+            "Period: " + searchFinal['Period'].item() + '     '+\
             "Unemployment Rate: " + str(searchFinal['Rate'].item())
     return text
 
