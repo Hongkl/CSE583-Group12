@@ -1,4 +1,3 @@
-import pandas as pd
 months = {'March', 'April', 'May', 'June', 'July', 'August', 'September'}
 counties = {"Adams", "Asotin", "Benton", "Chelan", "Clallam", "Clark",
             "Columbia", "Cowlitz", "Douglas", "Ferry", "Franklin",
@@ -27,4 +26,3 @@ def unemploy_text_parser(county, month, data):
         "Period: " + searchFinal['Period'].item() + '     ' +\
         "Unemployment Rate: " + str(searchFinal['Rate'].item())
     return text
-
