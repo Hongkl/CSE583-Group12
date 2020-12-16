@@ -22,7 +22,7 @@ def unemploy_text_parser(county, month, data):
     # Here should insert an exceptioncatch, if we don't have a dic
     searchFinal = searchCounty[searchCounty['Period'] == month]
     # Here should insert an exceptioncatch
-    text = "County Name: " +
+    text = "County Name: " +\
             searchFinal['County Name/State Abbr'].item()+'     '+\
             "Period: " + searchFinal['Period'].item() + '     '+\
             "Unemployment Rate: " + str(searchFinal['Rate'].item())
