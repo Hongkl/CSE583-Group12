@@ -5,8 +5,8 @@ UnitTests(unittest.TestCase) -- this class is a unit test which includes 5 diffe
 """
 import unittest
 from COVIDWA import ToolBox
+import pandas as pd
 
-data = pd.read_csv("Unemployment.csv")
 
 class UnitTests(unittest.TestCase):
     """"This class is a unit test which includes 8 different test for ToolBox.py."""
@@ -22,7 +22,7 @@ class UnitTests(unittest.TestCase):
         """
         county = "King"
         month = "June"
-        text = ToolBox.unemploy_text_parser(county, month, data)
+        text = ToolBox.unemploy_text_parser(county, month)
 
     def test_oneshot1(self):
         """"This function is a smoke test for ToolBox.py.
@@ -35,7 +35,7 @@ class UnitTests(unittest.TestCase):
         """
         county = "King"
         month = "June"
-        text = ToolBox.unemploy_text_parser(county, month, data)
+        text = ToolBox.unemploy_text_parser(county, month)
         test_text = 'County Name: King County     Period: June     Unemployment Rate: 9.6'
         self.assertEqual(text, test_text)
     
@@ -50,7 +50,7 @@ class UnitTests(unittest.TestCase):
         """
         county = "Pacific"
         month = "September"
-        text = ToolBox.unemploy_text_parser(county,month, data)
+        text = ToolBox.unemploy_text_parser(county,month)
         test_text = 'County Name: Pacific County     Period: September     Unemployment Rate: 9.5'
         self.assertEqual(text, test_text)
     
@@ -66,9 +66,9 @@ class UnitTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             county = "San Francisco"
             month = "June"
-            text = ToolBox.unemploy_text_parser(county, month, data)
+            text = ToolBox.unemploy_text_parser(county, month)
     
-    def test_edge1(self):
+    def test_edge2(self):
         """"This function is a smoke test for ToolBox.py.
         
         Args:
@@ -80,7 +80,7 @@ class UnitTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             county = "King"
             month = "November"
-            text = ToolBox.unemploy_text_parser(county, month, data)
+            text = ToolBox.unemploy_text_parser(county, month)
     
 
 if __name__ == '__main__':
