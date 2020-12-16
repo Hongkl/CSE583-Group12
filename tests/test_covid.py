@@ -7,10 +7,14 @@ import unittest
 import pandas as pd
 from COVIDWA import ToolBox
 import pandas as pd
+<<<<<<< HEAD
 import sys
 
 sys.path.append('..')
 data = pd.read_csv("CSE583_Group12/data/Unemployment/Unemployment.csv")
+=======
+data = pd.read_csv("Unemployment.csv")
+>>>>>>> 72cc103117703e962c879473d548dee444d43399
 
 
 class UnitTests(unittest.TestCase):
