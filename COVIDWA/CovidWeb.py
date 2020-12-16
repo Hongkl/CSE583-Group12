@@ -67,9 +67,10 @@ class CovidWeb(param.Parameterized):
         Return: Call ToolBox.unemploy_text_parser(county, month),
         which will return the parsed text about unemployment rate."""
 
+        data = pd.read_csv("../data/Unemployed/Unemployment.csv")
         county = self.Counties
         month = self.Months
-        return ToolBox.unemploy_text_parser(county, month)
+        return ToolBox.unemploy_text_parser(county, month, data)
 
     def getGeoAndData(self):
         """This is a method called getGeoAndData.
