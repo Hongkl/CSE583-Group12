@@ -9,7 +9,7 @@ from COVIDWA import ToolBox
 import sys
 
 sys.path.append('..')
-data = pd.read_csv("data/Unemployment/Unemployment.csv")
+data = pd.read_csv("data/Unemployed/Unemployment.csv")
 
 
 class UnitTests(unittest.TestCase):
