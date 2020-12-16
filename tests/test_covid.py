@@ -6,11 +6,10 @@ UnitTests(unittest.TestCase) -- this class is a unit test which includes 5 diffe
 import unittest
 import pandas as pd
 from COVIDWA import ToolBox
-import pandas as pd
 import sys
 
 sys.path.append('..')
-data = pd.read_csv("CSE583_Group12/data/Unemployment/Unemployment.csv")
+data = pd.read_csv("data/Unemployment/Unemployment.csv")
 
 
 class UnitTests(unittest.TestCase):
