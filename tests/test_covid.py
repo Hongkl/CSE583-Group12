@@ -7,6 +7,7 @@ import unittest
 import pandas as pd
 from COVIDWA import ToolBox
 import pandas as pd
+data = pd.read_csv("Unemployment")
 
 
 class UnitTests(unittest.TestCase):
@@ -23,7 +24,7 @@ class UnitTests(unittest.TestCase):
         """
         county = "King"
         month = "June"
-        text = ToolBox.unemploy_text_parser(county, month)
+        text = ToolBox.unemploy_text_parser(county, month, data)
 
     def test_oneshot1(self):
         """"This function is a smoke test for ToolBox.py.
@@ -36,7 +37,7 @@ class UnitTests(unittest.TestCase):
         """
         county = "King"
         month = "June"
-        text = ToolBox.unemploy_text_parser(county, month)
+        text = ToolBox.unemploy_text_parser(county, month, data)
         test_text = 'County Name: King County     Period: June     Unemployment Rate: 9.6'
         self.assertEqual(text, test_text)
     
@@ -51,7 +52,7 @@ class UnitTests(unittest.TestCase):
         """
         county = "Pacific"
         month = "September"
-        text = ToolBox.unemploy_text_parser(county,month)
+        text = ToolBox.unemploy_text_parser(county,month, data)
         test_text = 'County Name: Pacific County     Period: September     Unemployment Rate: 9.5'
         self.assertEqual(text, test_text)
     
@@ -67,7 +68,7 @@ class UnitTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             county = "San Francisco"
             month = "June"
-            text = ToolBox.unemploy_text_parser(county, month)
+            text = ToolBox.unemploy_text_parser(county, month, data)
     
     def test_edge2(self):
         """"This function is a smoke test for ToolBox.py.
@@ -81,7 +82,7 @@ class UnitTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             county = "King"
             month = "November"
-            text = ToolBox.unemploy_text_parser(county, month)
+            text = ToolBox.unemploy_text_parser(county, month, data)
     
 
 if __name__ == '__main__':
