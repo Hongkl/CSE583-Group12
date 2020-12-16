@@ -10,14 +10,13 @@ counties = {"Adams", "Asotin", "Benton", "Chelan", "Clallam", "Clark",
             "Walla Walla", "Whatcom", "Whitman", "Yakima"}
 
 
-def unemploy_text_parser(county, month):
+def unemploy_text_parser(county, month, data):
     if month not in months:
         raise ValueError("Wrong month value input")
 
     if county not in county:
         raise ValueError("Wrong county value input")
 
-    data = pd.read_csv("Unemployment.csv")
     countyName = county + " " + "County"
     searchCounty = data[data['County Name/State Abbr'] == countyName]
     # Here should insert an exceptioncatch, if we don't have a dic
@@ -30,10 +29,8 @@ def unemploy_text_parser(county, month):
     return text
 
 
-def plot(county):
+def plot(county, covid_data):
     county = county + " " + "County"
-    covid_data = pd.read_csv(
-        "Unemployment.csv")
     df_covid = pd.DataFrame(covid_data.loc[covid_data['County'] == county,
                                            ['March',
                                             'April',
