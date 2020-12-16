@@ -10,6 +10,7 @@ import sys
 
 sys.path.append('..')
 data = pd.read_csv("data/Unemployed/Unemployment.csv")
+plot_data = pd.read_csv("data/COVID19/COVID19-Rate and Unemployment.csv")
 
 
 class UnitTests(unittest.TestCase):
@@ -38,7 +39,7 @@ class UnitTests(unittest.TestCase):
             bool: True for pass the test, False otherwise.
         """
         county = "King"
-        ToolBox.plot(county, data)
+        ToolBox.plot(county, plot_data)
 
     def test_oneshot1(self):
         """"This function is a smoke test for ToolBox.py.
